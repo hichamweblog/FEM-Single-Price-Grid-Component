@@ -1,0 +1,233 @@
+/* CSS Reset */
+html {
+  box-sizing: border-box;
+
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+
+}
+
+
+ul {
+  list-style: none;
+}
+
+/* CSS Variables */
+:root {
+  /* Colors */
+  --cyan: hsl(179, 62%, 43%);
+  --cyan-light: hsl(179, 48%, 52%);
+  --bright-yellow: hsl(71, 73%, 54%);
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+  --white: hsla(0, 0%, 100%, 1);
+
+
+  /* Fonts */
+  --ff: "Karla", sans-serif;
+
+  --fw-400: 400;
+  --fw-700: 700;
+
+
+}
+
+/* Styles */
+
+body {
+  font-family: var(--ff);
+  font-weight: var(--fw-400);
+  font-style: normal;
+  color: var(--cyan);
+  background-color: var(--light-gray);
+  line-height: normal;
+  display: grid;
+  place-items: center;
+  padding: 4rem 2rem;
+
+}
+
+.pricing-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  border-radius: 0.3125rem;
+  background: var(--white);
+  box-shadow: 0px 15px 30px 0px rgba(0, 81, 171, 0.15);
+}
+
+.community-intro {
+  padding: 1.75rem 1.5rem 2rem;
+}
+
+.community-intro h2 {
+  margin-bottom: 1.5rem;
+  font-weight: var(--fw-700);
+  color: var(--cyan);
+  font-size: 1.25rem;
+  letter-spacing: -0.01563rem;
+}
+
+.community-intro .guarantee-highlight {
+  color: var(--bright-yellow);
+  font-weight: var(--fw-700);
+  font-size: 0.9375rem;
+  font-weight: var(--fw-700);
+  line-height: 1.25rem;
+  letter-spacing: -0.01169rem;
+  margin-bottom: 1rem;
+}
+
+.community-intro p {
+  font-size: 0.875rem;
+  font-weight: var(--fw-400);
+  line-height: 1.625rem;
+  letter-spacing: -0.01094rem;
+}
+
+.monthly-subscription {
+  padding: 1.5rem;
+  background: var(--cyan);
+  color: var(--white);
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.monthly-subscription h3 {
+  font-size: 1.125rem;
+  font-weight: var(--fw-700);
+  margin-bottom: 1.12rem;
+}
+
+.monthly-subscription .subscription-price {
+  font-size: 2rem;
+  font-weight: var(--fw-700);
+  letter-spacing: -0.025rem;
+  margin-bottom: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.69rem;
+}
+
+.monthly-subscription .subscription-price span {
+  font-weight: var(--fw-400);
+  color: var(--light-gray);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.625rem;
+  letter-spacing: -0.0125rem;
+}
+
+.monthly-subscription p {
+  font-size: 1rem;
+  font-weight: var(--fw-400);
+  line-height: 1.625rem;
+  letter-spacing: -0.0125rem;
+  margin-bottom: 1.62rem;
+}
+
+.monthly-subscription button {
+  border-radius: 0.3125rem;
+  background: var(--bright-yellow);
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.10);
+  border: 0;
+  padding-block: 0.94rem 0.84rem;
+  width: 100%;
+  font: inherit;
+  font-size: 1rem;
+  font-weight: var(--fw-700);
+  color: var(--white);
+  display: block;
+  transition: background 0.3s ease-in;
+  cursor: pointer;
+}
+
+.monthly-subscription button:hover {
+  background: hsl(71, 56%, 49%);
+}
+
+.benefits-list {
+  padding: 1.75rem 1.5rem 2rem;
+  color: var(--white);
+  background: var(--cyan-light);
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.benefits-list h3 {
+  font-size: 1.125rem;
+  font-weight: var(--fw-700);
+  margin-bottom: 1.12rem;
+  letter-spacing: -0.01406rem;
+}
+
+.benefits-list ul {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+}
+
+.benefits-list ul li {
+  font-size: 0.875rem;
+  line-height: 1.1rem;
+  letter-spacing: -0.01094rem;
+  color: var(--light-gray);
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    padding: 10.19rem 25.12 10.12rem 25.19rem;
+  }
+
+  .pricing-section {
+    grid-template-columns: 1.1fr 1fr;
+    max-width: 39.68rem;
+    border-radius: 0.5rem;
+  }
+
+  .community-intro {
+    padding: 2.5rem;
+    grid-column: 1/-1;
+  }
+
+  .community-intro h2 {
+    font-size: 1.5rem;
+    letter-spacing: -0.01875rem;
+  }
+
+  .community-intro .guarantee-highlight {
+    font-size: 1.125rem;
+    letter-spacing: -0.01406rem;
+  }
+
+  .community-intro p {
+    font-size: 1rem;
+    letter-spacing: -0.01169rem;
+  }
+
+  .monthly-subscription {
+    padding: 2.5rem 2.5rem 2.4rem;
+    border-bottom-left-radius: 0.5rem;
+  }
+
+  .benefits-list {
+    padding: 2.5rem;
+    border-bottom-right-radius: 0.5rem;
+  }
+}
